@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SLOTD — San Luis Obispo Technical Drafting</title>
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml" />
+  <meta name="description" content="San Luis Obispo Technical Drafting: precision drawings, GD&T, and 3D CAD geometry for machine shops and hardware teams nationwide." />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <!-- utility bar, like most shop sites -->
+  <div class="utility">
+    <div class="utility-in">
+      <span class="util-item">Serving clients nationwide · Based in San Luis Obispo, CA</span>
+      <span class="util-right">
+        <a class="util-item" data-phone hidden></a>
+        <a class="util-item" data-email></a>
+      </span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#top"><svg class="logo" viewBox="-54 -1609 6831 1877" role="img" aria-label="SLOTD"><g fill="currentColor"><path d="M0 -411H88L133 -196Q175 -147 260.0 -114.0Q345 -81 436 -81Q723 -81 723 -317Q723 -391 668.5 -442.0Q614 -493 497 -533Q325 -590 249.5 -625.5Q174 -661 122.0 -709.0Q70 -757 39.0 -825.5Q8 -894 8 -994Q8 -1171 128.5 -1263.5Q249 -1356 481 -1356Q649 -1356 853 -1313V-994H764L719 -1178Q617 -1252 481 -1252Q358 -1252 292.0 -1206.5Q226 -1161 226 -1067Q226 -1000 281.0 -952.5Q336 -905 453 -868Q682 -793 767.5 -737.5Q853 -682 898.0 -600.0Q943 -518 943 -407Q943 20 440 20Q325 20 205.5 0.5Q86 -19 0 -51Z"/><path d="M1864 -1268 1657 -1242V-106H1930Q2143 -106 2243 -126L2325 -405H2415L2377 0H1170V-73L1342 -100V-1242L1171 -1268V-1341H1864Z"/><path d="M4183.52 0V-73L4396.52 -100V-1235H4345.52Q4116.52 -1235 4023.5200000000004 -1215L3996.5200000000004 -966H3905.5200000000004V-1341H5208.52V-966H5116.52L5089.52 -1215Q5006.52 -1233 4761.52 -1233H4712.52V-100L4925.52 -73V0Z"/><path d="M6391.52 -670Q6391.52 -960 6285.52 -1095.5Q6179.52 -1231 5940.52 -1231H5866.52V-114Q5962.52 -106 6040.52 -106Q6170.52 -106 6246.02 -162.0Q6321.52 -218 6356.52 -337.5Q6391.52 -457 6391.52 -670ZM6017.52 -1341Q6378.52 -1341 6551.02 -1177.5Q6723.52 -1014 6723.52 -678Q6723.52 -333 6558.52 -164.5Q6393.52 4 6059.52 4L5610.52 0H5380.52V-73L5552.52 -100V-1242L5380.52 -1268V-1341Z"/></g><path fill-rule="evenodd" d="M2700.0,-871.7 A482.8,482.8 0 0 1 3665.5,-871.7 L3665.5,-469.3 A482.8,482.8 0 0 1 2700.0,-469.3 Z M2907.9,-871.7 A274.9,391.6 0 0 1 3457.7,-871.7 L3457.7,-469.3 A274.9,391.6 0 0 1 2907.9,-469.3 Z" fill="currentColor"/><path d="M3102.3,-871.7L3263.2,-871.7M3182.8,-791.2L3182.8,-952.1M3316.9,-871.7L3766.1,-871.7M3048.7,-871.7L2599.4,-871.7M3102.3,-469.3L3263.2,-469.3M3182.8,-388.9L3182.8,-549.8M3316.9,-469.3L3766.1,-469.3M3048.7,-469.3L2599.4,-469.3M3182.8,-1005.8L3182.8,-1555.6M3182.8,-737.6L3182.8,-603.4M3182.8,-335.2L3182.8,214.6" stroke="var(--logo-line, var(--crimson))" stroke-width="42.9" fill="none"/></svg><span id="brand-full" class="brand-full">San Luis Obispo Technical Drafting</span></a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="work.html">Our Work</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary nav-quote">Request a Quote</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero-band">
+      <section class="hero">
+        <p class="eyebrow">Contract CAD &amp; Drafting · Nationwide</p>
+        <h1>Precision Drawings<span class="dot">.</span><br />GD&amp;T<span class="dot">.</span><br />3D Geometries<span class="dot">.</span></h1>
+        <p class="lede" id="tagline"></p>
+        <ul class="hero-checks">
+          <li>3D modeling in Autodesk Fusion</li>
+          <li>GD&amp;T per ASME Y14.5</li>
+          <li>STEP, DXF &amp; PDF deliverables</li>
+          <li>Works in your CAD system</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact">Request a Quote</a>
+          <a class="btn btn-ghost" href="#services">Review Our Services</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- tools / standards strip (text only, no third-party logos) -->
+    <div class="strip">
+      <div class="strip-in">
+        <span>Autodesk Fusion</span><span>Your CAD, Your Seat</span><span>ASME Y14.5-2009</span><span>STEP · IGES · DXF</span><span>PDF Drawing Packages</span>
+      </div>
+    </div>
+
+    <section id="about" class="section">
+      <div class="cards3">
+        <article class="card">
+          <h3>Who We Are</h3>
+          <p>A contract drafting and design service based in San Luis Obispo, California, run by mechanical engineering student Drew Arney and serving clients nationwide.</p>
+        </article>
+        <article class="card">
+          <h3>What We Do</h3>
+          <p>We build 3D models and production drawings from whatever you have: a sketch, a worn-out part, a photo, or a print that's been faxed one too many times.</p>
+        </article>
+        <article class="card">
+          <h3>How It Works</h3>
+          <p>Send what you have, get a fixed quote and a date, review a draft, and receive native files (Fusion or your CAD system), STEP, and a PDF drawing set.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section section-alt">
+      <div class="section-in">
+        <div class="section-head center">
+          <p class="kicker">What we offer</p>
+          <h2>Services</h2>
+        </div>
+        <div id="services-grid" class="services"></div>
+        <div class="cad-note">
+          <h3>Your CAD, your standards</h3>
+          <p>Most work is done in <strong>Autodesk Fusion</strong>. If your team runs SolidWorks, Inventor, Creo, Onshape, NX, or another system, provide a license or seat and I'll work directly in your environment, using your templates, title blocks, and file conventions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head center">
+        <p class="kicker">Who it's for</p>
+        <h2>Industries We Support</h2>
+      </div>
+      <div class="tiles">
+        <div class="tile">Job Shops &amp; Machine Shops</div>
+        <div class="tile">Aerospace &amp; Propulsion</div>
+        <div class="tile">Automotive &amp; Motorsports</div>
+        <div class="tile">Industrial Equipment</div>
+        <div class="tile">Ag &amp; Wine Equipment</div>
+        <div class="tile">Startups &amp; Prototyping</div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta-band">
+      <div class="cta-in">
+        <div>
+          <h2>Have a part that needs a print?</h2>
+          <p>Send a sketch, a photo, an old print, or a STEP file. You'll get a quote and a turnaround date, usually within one business day.</p>
+        </div>
+        <div class="cta-actions">
+          <a id="email-link" data-quote class="btn btn-gold btn-lg" href="#">Request a Quote</a>
+          <span class="cta-email" data-email-text></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-in">
+      <div class="f-col">
+        <div class="f-logo"><svg class="logo" viewBox="-54 -1609 6831 1877" role="img" aria-label="SLOTD"><g fill="currentColor"><path d="M0 -411H88L133 -196Q175 -147 260.0 -114.0Q345 -81 436 -81Q723 -81 723 -317Q723 -391 668.5 -442.0Q614 -493 497 -533Q325 -590 249.5 -625.5Q174 -661 122.0 -709.0Q70 -757 39.0 -825.5Q8 -894 8 -994Q8 -1171 128.5 -1263.5Q249 -1356 481 -1356Q649 -1356 853 -1313V-994H764L719 -1178Q617 -1252 481 -1252Q358 -1252 292.0 -1206.5Q226 -1161 226 -1067Q226 -1000 281.0 -952.5Q336 -905 453 -868Q682 -793 767.5 -737.5Q853 -682 898.0 -600.0Q943 -518 943 -407Q943 20 440 20Q325 20 205.5 0.5Q86 -19 0 -51Z"/><path d="M1864 -1268 1657 -1242V-106H1930Q2143 -106 2243 -126L2325 -405H2415L2377 0H1170V-73L1342 -100V-1242L1171 -1268V-1341H1864Z"/><path d="M4183.52 0V-73L4396.52 -100V-1235H4345.52Q4116.52 -1235 4023.5200000000004 -1215L3996.5200000000004 -966H3905.5200000000004V-1341H5208.52V-966H5116.52L5089.52 -1215Q5006.52 -1233 4761.52 -1233H4712.52V-100L4925.52 -73V0Z"/><path d="M6391.52 -670Q6391.52 -960 6285.52 -1095.5Q6179.52 -1231 5940.52 -1231H5866.52V-114Q5962.52 -106 6040.52 -106Q6170.52 -106 6246.02 -162.0Q6321.52 -218 6356.52 -337.5Q6391.52 -457 6391.52 -670ZM6017.52 -1341Q6378.52 -1341 6551.02 -1177.5Q6723.52 -1014 6723.52 -678Q6723.52 -333 6558.52 -164.5Q6393.52 4 6059.52 4L5610.52 0H5380.52V-73L5552.52 -100V-1242L5380.52 -1268V-1341Z"/></g><path fill-rule="evenodd" d="M2700.0,-871.7 A482.8,482.8 0 0 1 3665.5,-871.7 L3665.5,-469.3 A482.8,482.8 0 0 1 2700.0,-469.3 Z M2907.9,-871.7 A274.9,391.6 0 0 1 3457.7,-871.7 L3457.7,-469.3 A274.9,391.6 0 0 1 2907.9,-469.3 Z" fill="currentColor"/><path d="M3102.3,-871.7L3263.2,-871.7M3182.8,-791.2L3182.8,-952.1M3316.9,-871.7L3766.1,-871.7M3048.7,-871.7L2599.4,-871.7M3102.3,-469.3L3263.2,-469.3M3182.8,-388.9L3182.8,-549.8M3316.9,-469.3L3766.1,-469.3M3048.7,-469.3L2599.4,-469.3M3182.8,-1005.8L3182.8,-1555.6M3182.8,-737.6L3182.8,-603.4M3182.8,-335.2L3182.8,214.6" stroke="var(--logo-line, var(--crimson))" stroke-width="42.9" fill="none"/></svg></div>
+        <p>San Luis Obispo Technical Drafting. Precision drawings, GD&amp;T, and 3D geometries for shops and hardware teams across the U.S.</p>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <p><a data-email></a><br /><a data-phone hidden></a></p>
+        <p id="hours"></p>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <p><a href="#about">About</a><br /><a href="#services">Services</a><br /><a href="work.html">Our Work</a><br /><a href="#contact">Request a Quote</a></p>
+      </div>
+      <div class="f-col">
+        <h4>Service Area</h4>
+        <p>Nationwide. Based in San Luis Obispo, California, and working remotely with shops and teams across the United States.</p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="year"></span> <span id="foot-name">SLOTD</span> · San Luis Obispo Technical Drafting · <strong class="motto">Stay SLOTD.</strong></span>
+      <span>Dimensions in inches unless otherwise specified</span>
+    </div>
+  </footer>
+
+  <dialog id="lightbox">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <img alt="" />
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

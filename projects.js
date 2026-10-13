@@ -11,7 +11,7 @@ export const SITE = {
   location: "San Luis Obispo, CA",
   email: "drew@drewarneycad.com",
   phone: "",                  // ← e.g. "(805) 555-0123" — leave "" to hide it
-  hours: "Mon–Fri · Replies within 1 business day",
+  hours: "Mon–Sat",
 };
 
 // Gallery is empty for now. When a project is cleared to show, add it like this:

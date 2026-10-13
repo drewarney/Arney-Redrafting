@@ -18,6 +18,7 @@
   --logo-red: #8f1622;         /* logo only */
   --viewer-bg: #eceef0;
   --sans: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "EB Garamond", Garamond, "Times New Roman", serif;   /* brand lockup only */
   --display: "Barlow Condensed", "Barlow", system-ui, sans-serif;
   --wrap: 1200px;
   --gut: clamp(16px, 4vw, 48px);
@@ -53,12 +54,11 @@ h1, h2, h3, h4 { color: var(--ink); text-wrap: balance; }
   border-bottom: 1px solid var(--line);
   backdrop-filter: saturate(1.4) blur(8px);
 }
-.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; min-width: 0; }
+.brand { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-decoration: none; min-width: 0; }
 .logo { --logo-line: var(--logo-red); display: block; height: 40px; width: auto; color: var(--logo-red); overflow: visible; flex: none; }
 .brand-full {
-  font-size: 13px; font-weight: 600; color: var(--ink-3); line-height: 1.25; max-width: 19ch;
-  text-transform: uppercase; letter-spacing: .06em;
-  padding-left: 14px; border-left: 1px solid var(--line-2);
+  font-family: var(--serif); font-weight: 600; font-size: 12.5px; line-height: 1.1;
+  color: var(--logo-red); text-transform: uppercase; letter-spacing: .08em; white-space: nowrap;
 }
 .topbar nav { display: flex; gap: 28px; align-items: center; }
 .topbar nav a:not(.btn) {
@@ -300,9 +300,11 @@ dialog#lightbox img { display: block; max-width: 96vw; max-height: 94vh; }
   .viewer-hint { display: none; }
 }
 @media (max-width: 600px) {
-  .brand-full { display: none; }
-  .logo { height: 32px; }
-  .nav-quote { padding: 8px 12px !important; font-size: 13px !important; }
+  .topbar { gap: 10px; }
+  .brand { flex: none; }
+  .logo { height: 28px; }
+  .brand-full { font-size: 9.5px; letter-spacing: .03em; }
+  .nav-quote { padding: 8px 12px !important; font-size: 13px !important; white-space: nowrap; }
   .utility-in > .util-item:first-child { display: none; }
   .facts-in { grid-template-columns: 1fr; }
   .fact, .fact:nth-child(3) { border-left: 0; padding: 18px 0; }

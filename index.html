@@ -48,8 +48,10 @@
             <a class="btn btn-outline-light" href="#services">Our Services</a>
           </div>
         </div>
-        <figure class="hero-photo">
-          <img src="img/shop-grinding.jpg" alt="Drew Arney grinding a steel part at a workbench vise, sparks flying" width="1000" height="1250" fetchpriority="high" />
+        <figure class="hero-figure">
+          <!-- swap in your own drawing: replace img/hero-drawing.svg (or point this at a PNG/JPG) -->
+          <img src="img/hero-drawing.svg" alt="Sample drawing of a mounting flange with dimensions and GD&amp;T callouts" width="600" height="440" />
+          <figcaption>Sample drawing</figcaption>
         </figure>
       </section>
     </div>
@@ -62,30 +64,6 @@
         <div class="fact"><strong>Your CAD</strong><span>Fusion, or work in your seat</span></div>
       </div>
     </div>
-
-    <section id="about" class="section">
-      <div class="split split-photo">
-        <figure class="photo">
-          <img src="img/cad-desk.jpg" alt="Drew Arney working on a CAD model at his desk" width="1000" height="1000" loading="lazy" />
-        </figure>
-        <div>
-          <p class="kicker">About SLOTD</p>
-          <h2>Drafting support for shops that would rather be cutting chips.</h2>
-          <p class="body-lg">San Luis Obispo Technical Drafting is a contract drafting and design service run by mechanical engineering student Drew Arney, working with shops and hardware teams across the country.</p>
-          <p>We build 3D models and production drawings from whatever you have: a sketch, a worn-out part, a photo, or a print that's been faxed one too many times. You get clean, machinist-ready prints without tying up your programmers or engineers.</p>
-        </div>
-      </div>
-
-      <div class="process">
-        <h3>How it works</h3>
-        <ol class="steps">
-          <li><strong>Send what you have</strong><span>A sketch, photo, sample part, old print, or STEP file.</span></li>
-          <li><strong>Get a fixed quote</strong><span>A set price and a delivery date before any work starts.</span></li>
-          <li><strong>Review a draft</strong><span>Mark it up; revisions are handled before anything is final.</span></li>
-          <li><strong>Receive your files</strong><span>Native CAD, STEP, and a PDF drawing set, ready for the floor.</span></li>
-        </ol>
-      </div>
-    </section>
 
     <section id="services" class="section-alt">
       <div class="section">
@@ -104,15 +82,44 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-head">
+    <section id="about" class="section">
+      <div class="split split-photo">
         <div>
-          <p class="kicker">Who it's for</p>
-          <h2>Industries we support</h2>
+          <p class="kicker">About SLOTD</p>
+          <h2>Drafting support for shops that would rather be cutting chips.</h2>
+          <p class="body-lg">San Luis Obispo Technical Drafting is a contract drafting and design service run by mechanical engineering student Drew Arney, working with shops and hardware teams across the country.</p>
+          <p>We build 3D models and production drawings from whatever you have: a sketch, a worn-out part, a photo, or a print that's been faxed one too many times. You get clean, machinist-ready prints without tying up your programmers or engineers.</p>
         </div>
-        <p>If it gets machined, fabricated, or assembled, it needs a print someone can build from.</p>
+        <div class="photo-pair">
+          <figure class="photo">
+            <img src="img/cad-desk.jpg" alt="Drew Arney working on a CAD model at his desk" width="900" height="900" loading="lazy" />
+          </figure>
+          <figure class="photo photo-shop">
+            <img src="img/shop-grinding.jpg" alt="Drew Arney grinding a steel part at a workbench vise" width="1000" height="1250" loading="lazy" />
+          </figure>
+        </div>
       </div>
-      <div class="split split-industries">
+
+      <div class="process">
+        <h3>How it works</h3>
+        <ol class="steps">
+        <li><strong>Send what you have</strong><span>A sketch, photo, sample part, old print, or STEP file.</span></li>
+        <li><strong>Get a fixed quote</strong><span>A set price and a delivery date before any work starts.</span></li>
+        <li><strong>Review a draft</strong><span>Mark it up; revisions are handled before anything is final.</span></li>
+        <li><strong>Receive your files</strong><span>Native CAD, STEP, and a PDF drawing set, ready for the floor.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <div class="section">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Who it's for</p>
+            <h2>Industries we support</h2>
+          </div>
+          <p>If it gets machined, fabricated, or assembled, it needs a print someone can build from.</p>
+        </div>
         <ul class="tiles">
           <li>Job Shops &amp; Machine Shops</li>
           <li>Aerospace &amp; Propulsion</li>
@@ -121,9 +128,6 @@
           <li>Ag &amp; Wine Equipment</li>
           <li>Startups &amp; Prototyping</li>
         </ul>
-        <figure class="photo">
-          <img src="img/carbon-part.jpg" alt="Carbon-fiber flying-wing structure mounted on a test fixture in an engineering lab" width="1000" height="1000" loading="lazy" />
-        </figure>
       </div>
     </section>
 

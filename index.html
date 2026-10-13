@@ -6,13 +6,15 @@
   <title>SLOTD — San Luis Obispo Technical Drafting</title>
   <link rel="icon" href="logo-mark.svg" type="image/svg+xml" />
   <meta name="description" content="San Luis Obispo Technical Drafting: precision drawings, GD&T, and 3D CAD geometry for machine shops and hardware teams nationwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
   <script type="importmap">
     { "imports": { "three": "./vendor/three.module.min.js" } }
   </script>
 </head>
 <body>
-  <!-- utility bar, like most shop sites -->
   <div class="utility">
     <div class="utility-in">
       <span class="util-item">Serving clients nationwide · Based in San Luis Obispo, CA</span>
@@ -37,51 +39,58 @@
   <main id="top">
     <div class="hero-band">
       <section class="hero">
-        <p class="eyebrow">Contract CAD &amp; Drafting · Nationwide</p>
-        <h1>Precision Drawings<span class="dot">.</span><br />GD&amp;T<span class="dot">.</span><br />3D Geometries<span class="dot">.</span></h1>
-        <p class="lede" id="tagline"></p>
-        <ul class="hero-checks">
-          <li>3D modeling in Autodesk Fusion</li>
-          <li>GD&amp;T per ASME Y14.5</li>
-          <li>STEP, DXF &amp; PDF deliverables</li>
-          <li>Works in your CAD system</li>
-        </ul>
-        <div class="hero-actions">
-          <a class="btn btn-white" href="#contact">Request a Quote</a>
-          <a class="btn btn-ghost" href="#services">Review Our Services</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Contract CAD &amp; Drafting · Nationwide</p>
+          <h1>Precision drawings, GD&amp;T, and 3D models for machine shops.</h1>
+          <p class="lede" id="tagline"></p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="#contact">Request a Quote</a>
+            <a class="btn btn-outline-light" href="#services">Our Services</a>
+          </div>
         </div>
+        <figure class="hero-figure">
+          <img src="img/flange-drawing.svg" alt="Sample drawing of a mounting flange with dimensions and GD&amp;T callouts" width="600" height="440" />
+        </figure>
       </section>
     </div>
 
-    <!-- tools / standards strip (text only, no third-party logos) -->
-    <div class="strip">
-      <div class="strip-in">
-        <span>Autodesk Fusion</span><span>Your CAD, Your Seat</span><span>ASME Y14.5-2009</span><span>STEP · IGES · DXF</span><span>PDF Drawing Packages</span>
+    <div class="facts">
+      <div class="facts-in">
+        <div class="fact"><strong>1 business day</strong><span>Typical quote turnaround</span></div>
+        <div class="fact"><strong>ASME Y14.5</strong><span>GD&amp;T on every print</span></div>
+        <div class="fact"><strong>STEP · DXF · PDF</strong><span>Plus native CAD files</span></div>
+        <div class="fact"><strong>Your CAD</strong><span>Fusion, or work in your seat</span></div>
       </div>
     </div>
 
     <section id="about" class="section">
-      <div class="cards3">
-        <article class="card">
-          <h3>Who We Are</h3>
-          <p>A contract drafting and design service based in San Luis Obispo, California, run by mechanical engineering student Drew Arney and serving clients nationwide.</p>
-        </article>
-        <article class="card">
-          <h3>What We Do</h3>
-          <p>We build 3D models and production drawings from whatever you have: a sketch, a worn-out part, a photo, or a print that's been faxed one too many times.</p>
-        </article>
-        <article class="card">
-          <h3>How It Works</h3>
-          <p>Send what you have, get a fixed quote and a date, review a draft, and receive native files (Fusion or your CAD system), STEP, and a PDF drawing set.</p>
-        </article>
+      <div class="split">
+        <div>
+          <p class="kicker">About SLOTD</p>
+          <h2>Drafting support for shops that would rather be cutting chips.</h2>
+          <p class="body-lg">San Luis Obispo Technical Drafting is a contract drafting and design service run by mechanical engineering student Drew Arney, working with shops and hardware teams across the country.</p>
+          <p>We build 3D models and production drawings from whatever you have: a sketch, a worn-out part, a photo, or a print that's been faxed one too many times. You get clean, machinist-ready prints without tying up your programmers or engineers.</p>
+        </div>
+        <div class="process">
+          <h3>How it works</h3>
+          <ol class="steps">
+            <li><strong>Send what you have</strong><span>A sketch, photo, sample part, old print, or STEP file.</span></li>
+            <li><strong>Get a fixed quote</strong><span>A price and a delivery date, usually within one business day.</span></li>
+            <li><strong>Review a draft</strong><span>Mark it up; revisions are handled before anything is final.</span></li>
+            <li><strong>Receive your files</strong><span>Native CAD, STEP, and a PDF drawing set, ready for the floor.</span></li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <section id="services" class="section section-alt">
-      <div class="section-in">
-        <div class="section-head center">
-          <p class="kicker">What we offer</p>
-          <h2>Services</h2>
+    <section id="services" class="section-alt">
+      <div class="section">
+        <div class="section-head">
+          <div>
+            <p class="kicker">What we offer</p>
+            <h2>Services</h2>
+          </div>
+          <p>From a single part to a full assembly, every drawing is checked for manufacturability before it leaves the desk.</p>
         </div>
         <div id="services-grid" class="services"></div>
         <div class="cad-note">
@@ -92,18 +101,21 @@
     </section>
 
     <section class="section">
-      <div class="section-head center">
-        <p class="kicker">Who it's for</p>
-        <h2>Industries We Support</h2>
+      <div class="section-head">
+        <div>
+          <p class="kicker">Who it's for</p>
+          <h2>Industries we support</h2>
+        </div>
+        <p>If it gets machined, fabricated, or assembled, it needs a print someone can build from.</p>
       </div>
-      <div class="tiles">
-        <div class="tile">Job Shops &amp; Machine Shops</div>
-        <div class="tile">Aerospace &amp; Propulsion</div>
-        <div class="tile">Automotive &amp; Motorsports</div>
-        <div class="tile">Industrial Equipment</div>
-        <div class="tile">Ag &amp; Wine Equipment</div>
-        <div class="tile">Startups &amp; Prototyping</div>
-      </div>
+      <ul class="tiles">
+        <li>Job Shops &amp; Machine Shops</li>
+        <li>Aerospace &amp; Propulsion</li>
+        <li>Automotive &amp; Motorsports</li>
+        <li>Industrial Equipment</li>
+        <li>Ag &amp; Wine Equipment</li>
+        <li>Startups &amp; Prototyping</li>
+      </ul>
     </section>
 
     <section id="contact" class="cta-band">
@@ -113,7 +125,7 @@
           <p>Send a sketch, a photo, an old print, or a STEP file. You'll get a quote and a turnaround date, usually within one business day.</p>
         </div>
         <div class="cta-actions">
-          <a id="email-link" data-quote class="btn btn-white btn-lg" href="#">Request a Quote</a>
+          <a id="email-link" data-quote class="btn btn-light btn-lg" href="#">Request a Quote</a>
           <span class="cta-email" data-email-text></span>
         </div>
       </div>
@@ -154,3 +166,4 @@
   <script type="module" src="app.js"></script>
 </body>
 </html>
+

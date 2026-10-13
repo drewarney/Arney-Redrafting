@@ -29,6 +29,7 @@ if (SITE.phone) {
 const sg = $("#services-grid");
 if (sg) sg.innerHTML = SERVICES.map((s, i) => `
   <div class="service">
+    <span class="service-num">${String(i + 1).padStart(2, "0")}</span>
     <h3>${esc(s.title)}</h3>
     <p>${esc(s.body)}</p>
   </div>`).join("");

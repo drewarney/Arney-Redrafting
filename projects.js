@@ -10,7 +10,7 @@ export const SITE = {
   tagline: "Sketches, samples, and old prints turned into clean 3D models and machinist-ready drawings for machine shops and hardware teams across the country.",
   location: "San Luis Obispo, CA",
   email: "drew@drewarneycad.com",
-  phone: "",                  // ← e.g. "(805) 555-0123" — leave "" to hide it
+  phone: "(925) 330-4207",    // ← leave "" to hide it
   hours: "Mon–Sat",
 };
 

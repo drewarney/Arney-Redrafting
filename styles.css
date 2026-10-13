@@ -54,7 +54,7 @@ h1, h2, h3, h4 { color: var(--ink); text-wrap: balance; }
   border-bottom: 1px solid var(--line);
   backdrop-filter: saturate(1.4) blur(8px);
 }
-.brand { display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; min-width: 0; }
+.brand { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-decoration: none; min-width: 0; }
 .logo { --logo-line: var(--logo-red); display: block; height: 40px; width: auto; color: var(--logo-red); overflow: visible; flex: none; }
 .brand-full {
   font-family: var(--serif); font-weight: 600; font-size: 12.5px; line-height: 1.1;

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 60 1100 480" width="1100" height="480">
+  <defs>
+    <!-- matte black: flat, with a very faint grain -->
+    <filter id="matte" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.8" numOctaves="2" seed="4" result="n"/>
+      <feColorMatrix in="n" values="0 0 0 0 .55  0 0 0 0 .55  0 0 0 0 .55  0 0 0 .045 0" result="g"/>
+      <feComposite in="g" in2="SourceGraphic" operator="in" result="gc"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="gc"/></feMerge>
+    </filter>
+    <!-- pen silhouette: rounded cap end, straight barrel, tapered tip -->
+    <path id="pencil-outline" d="M80,343 L392,343 L462,360 L392,377 L80,377 Q64,377 64,360 Q64,343 80,343 Z"/>
+    <mask id="gap" maskUnits="userSpaceOnUse" x="-200" y="0" width="1200" height="600">
+      <rect x="-200" y="0" width="1200" height="600" fill="#fff"/>
+      <use href="#pencil-outline" transform="translate(0,-40)" fill="#000" stroke="#000" stroke-width="14" stroke-linejoin="round"/>
+    </mask>
+    <!-- everything right of the A's left edge: trims the pencil flush with it -->
+    <clipPath id="flush" clipPathUnits="userSpaceOnUse"><path d="M271.5,0 L1400,0 L1400,600 L17.5,600 Z"/></clipPath>
+    <!-- satin finish: soft beveled edge highlight + gentle top-lit sheen, applied to the whole logo -->
+    <filter id="finish" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+      <!-- thin light rim on the top-left edges (flat faces stay untouched, so the black stays matte) -->
+      <feOffset in="SourceAlpha" dx="2" dy="3" result="shift"/>
+      <feComposite in="SourceAlpha" in2="shift" operator="out" result="rim"/>
+      <feGaussianBlur in="rim" stdDeviation="1.6" result="rimSoft"/>
+      <feComposite in="rimSoft" in2="SourceAlpha" operator="in" result="rimIn"/>
+      <feColorMatrix in="rimIn" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .3 0" result="rimLight"/>
+      <!-- faint shadow rim on the bottom-right edges for depth -->
+      <feOffset in="SourceAlpha" dx="-2" dy="-3" result="shift2"/>
+      <feComposite in="SourceAlpha" in2="shift2" operator="out" result="rim2"/>
+      <feGaussianBlur in="rim2" stdDeviation="1.6" result="rim2Soft"/>
+      <feComposite in="rim2Soft" in2="SourceAlpha" operator="in" result="rim2In"/>
+      <feColorMatrix in="rim2In" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .4 0" result="rimShade"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="rimShade"/><feMergeNode in="rimLight"/></feMerge>
+    </filter>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".11"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity=".03"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="art" filter="url(#finish)">
+  <!-- A: shorter notched red leg + full-height black slash, italicized like the R -->
+  <g transform="translate(124.5,0) skewX(-14)" fill="#0f0f0f" filter="url(#matte)">
+  </g>
+  <!-- both A legs drawn over the pencil so it tucks under them -->
+  <g transform="translate(124.5,0) skewX(-14)" fill="#0f0f0f" filter="url(#matte)">
+    <path fill="#b0122f" d="M223,115 L288,244 L180,500 L60,500 Z"/>
+    <path d="M250,100 L358,100 L560,500 L451,500 Z"/>
+  </g>
+  <g transform="translate(124.7,0) skewX(-14)" fill="#0f0f0f" filter="url(#matte)">
+    <!-- R -->
+    <g transform="translate(130,0)">
+      <!-- angular R to match the A: straight cuts, rounded bowl, slanted leg parallel to the A's black leg -->
+      <path fill-rule="evenodd" d="M486,100 L730,100 Q800,100 800,170 L800,277 Q800,337 740,337 L590,337 L590,500 L486,500 Z
+        M590,190 L672,190 Q696,190 696,210 L696,227 Q696,247 672,247 L590,247 Z"/>
+      <path d="M590,337 L659.5,290 L930,500 L800,500 Z"/>
+    </g>
+  </g>
+  </g>
+  <mask id="artmask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="600"><use href="#art" style="filter:brightness(100)"/></mask>
+  <rect x="0" y="90" width="1200" height="420" fill="url(#sheen)" mask="url(#artmask)"/>
+</svg>

@@ -9,7 +9,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 
 // ── static text ──
 const setText = (sel, v) => { const e = $(sel); if (e) e.textContent = v; };
-setText("#foot-name", SITE.short);
+setText("#foot-name", SITE.name);
 setText("#tagline", SITE.tagline);
 setText("#year", new Date().getFullYear());
 setText("#hours", SITE.hours || "");

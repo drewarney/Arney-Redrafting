@@ -1,4 +1,6 @@
-# SLOTD — San Luis Obispo Technical Drafting
+# Arney Redrafting
+
+Logo files: `logo.svg` (flat, used on the site), `logo-mark.svg` (favicon), and `brand/` (master logo with the matte + satin finish, SVG and transparent PNG).
 
 Static site: plain HTML/CSS/JS, three.js 3D viewer (bundled in /vendor, no build step).
 

@@ -5,8 +5,8 @@
 // ─────────────────────────────────────────────────────────────
 
 export const SITE = {
-  name: "San Luis Obispo Technical Drafting",
-  short: "SLOTD",
+  name: "Arney Redrafting",
+  short: "AR",
   tagline: "Sketches, samples, and old prints turned into clean 3D models and machinist-ready drawings for machine shops and hardware teams across the country.",
   location: "San Luis Obispo, CA",
   email: "drew@drewarneycad.com",
@@ -41,7 +41,23 @@ export const SERVICES = [
     body: "Legacy or hand-drawn prints converted into modern CAD with consistent title blocks and revision control.",
   },
   {
-    title: "Design for Manufacturing",
-    body: "A second set of eyes on tool access, internal radii, tolerance stack-ups, and features that drive cost.",
+    title: "DFM Review",
+    body: "Customer models checked before you quote: deep pockets with sharp internal corners that need tiny end mills, unmachinable blind holes, and tolerances tighter than the part needs.",
+  },
+  {
+    title: "CAM-Ready Model Cleanup",
+    body: "Cosmetic chamfers, fillets, and minor features that get in the way of fixturing or toolpaths removed, so your machinists can program faster.",
+  },
+  {
+    title: "Fixture & Workholding Design",
+    body: "Send the part geometry and your vise or table specs, and get custom soft jaws, modular fixture plates, or welding jigs modeled and ready to cut on the shop floor.",
+  },
+  {
+    title: "Inspection & FAIR Documentation",
+    body: "Ballooned drawings with a numbered callout on every dimension, plus QC measurement logs tied to each GD&T callout, in Excel or PDF, for First Article Inspection Reports.",
+  },
+  {
+    title: "Reverse Engineering from Measurements",
+    body: "Send caliper, micrometer, or height-gauge readings with photos and sketches, and get back a fully constrained 3D model and a 2D print.",
   },
 ];

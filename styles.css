@@ -1,24 +1,23 @@
-/* SLOTD — clean machine-shop layout. Neutral charcoal, steel, and white;
-   the logo is the only red on the page.
+/* Arney Redrafting — clean machine-shop layout. Matte black, steel, and white,
+   with the logo's crimson used sparingly for accents.
    Utility bar → white nav → dark hero → facts strip →
    about + process → services → industries → quote banner → footer. */
 :root {
   --white: #ffffff;
   --paper: #ffffff;
   --paper-2: #f4f5f6;          /* alternating sections */
-  --ink: #16191c;              /* headings, primary text */
-  --ink-2: #4f5861;            /* body copy */
-  --ink-3: #78818a;            /* captions, kickers */
+  --ink: #141414;              /* headings, primary text (logo black) */
+  --ink-2: #4f5357;            /* body copy */
+  --ink-3: #787d82;            /* captions, kickers */
   --line: #e1e4e7;
   --line-2: #cdd2d7;
-  --charcoal: #1b1f23;         /* hero, buttons */
-  --charcoal-2: #272c32;
-  --charcoal-3: #353b42;
+  --charcoal: #141414;         /* hero, buttons: matte black */
+  --charcoal-2: #202020;
+  --charcoal-3: #2f2f2f;
   --steel: #9aa4ae;
-  --logo-red: #8f1622;         /* logo only */
+  --brand-red: #b0122f;        /* logo crimson, accents only */
   --viewer-bg: #eceef0;
   --sans: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --serif: "EB Garamond", Garamond, "Times New Roman", serif;   /* brand lockup only */
   --display: "Barlow Condensed", "Barlow", system-ui, sans-serif;
   --wrap: 1200px;
   --gut: clamp(16px, 4vw, 48px);
@@ -54,11 +53,13 @@ h1, h2, h3, h4 { color: var(--ink); text-wrap: balance; }
   border-bottom: 1px solid var(--line);
   backdrop-filter: saturate(1.4) blur(8px);
 }
-.brand { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-decoration: none; min-width: 0; }
-.logo { --logo-line: var(--logo-red); display: block; height: 40px; width: auto; color: var(--logo-red); overflow: visible; flex: none; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; color: var(--ink); }
+.logo { display: block; height: 40px; width: auto; color: var(--ink); overflow: visible; flex: none; }
+.logo-red { fill: var(--brand-red); }
 .brand-full {
-  font-family: var(--serif); font-weight: 600; font-size: 12.5px; line-height: 1.1;
-  color: var(--logo-red); text-transform: uppercase; letter-spacing: .08em; white-space: nowrap;
+  font-family: var(--display); font-style: italic; font-weight: 700; font-size: 22px; line-height: 1;
+  color: var(--ink); text-transform: uppercase; letter-spacing: .02em; white-space: nowrap;
+  padding-left: 12px; border-left: 2px solid var(--brand-red);
 }
 .topbar nav { display: flex; gap: 28px; align-items: center; }
 .topbar nav a:not(.btn) {
@@ -93,7 +94,7 @@ h1, h2, h3, h4 { color: var(--ink); text-wrap: balance; }
   background-image:
     linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px),
-    radial-gradient(90% 120% at 80% 40%, #2a3037 0%, var(--charcoal) 70%);
+    radial-gradient(90% 120% at 80% 40%, #2a2a2a 0%, var(--charcoal) 70%);
   background-size: 32px 32px, 32px 32px, auto;
 }
 .hero {
@@ -104,7 +105,7 @@ h1, h2, h3, h4 { color: var(--ink); text-wrap: balance; }
   font-size: 13.5px; font-weight: 600; color: var(--steel); letter-spacing: .16em; text-transform: uppercase;
   margin: 0 0 18px; display: flex; align-items: center; gap: 12px;
 }
-.eyebrow::before { content: ""; width: 28px; height: 1.5px; background: var(--steel); }
+.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--brand-red); }
 h1 {
   font-family: var(--display); font-weight: 700; color: var(--white);
   font-size: clamp(40px, 5.4vw, 66px); line-height: 1.02; margin: 0 0 22px;
@@ -134,7 +135,7 @@ h1 {
   text-transform: uppercase; letter-spacing: .16em;
   display: flex; align-items: center; gap: 12px;
 }
-.kicker::before { content: ""; width: 28px; height: 1.5px; background: var(--ink-3); }
+.kicker::before { content: ""; width: 28px; height: 2px; background: var(--brand-red); }
 h2 {
   font-family: var(--display); font-weight: 700; text-transform: uppercase;
   font-size: clamp(32px, 4vw, 46px); line-height: 1.04; margin: 0 0 18px; letter-spacing: .005em;
@@ -196,7 +197,7 @@ h2 {
   border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white);
   font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--ink); text-transform: uppercase; letter-spacing: .02em;
 }
-.tiles li::before { content: ""; width: 8px; height: 8px; border: 1.5px solid var(--ink-3); transform: rotate(45deg); flex: none; }
+.tiles li::before { content: ""; width: 8px; height: 8px; border: 1.5px solid var(--brand-red); transform: rotate(45deg); flex: none; }
 
 /* quote banner */
 .cta-band { background: var(--charcoal); color: #c6ccd2; }
@@ -237,7 +238,7 @@ a.cta-email:hover { text-decoration: underline; }
 .drawings { border-top: 1px solid var(--line-2); }
 .tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
 .tab { font-family: var(--sans); font-size: 15px; padding: 11px 16px; background: none; border: 0; border-right: 1px solid var(--line); cursor: pointer; color: var(--ink-3); }
-.tab[aria-selected="true"] { color: var(--ink); background: var(--paper-2); box-shadow: inset 0 -2px 0 var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); background: var(--paper-2); box-shadow: inset 0 -2px 0 var(--brand-red); }
 .tab-pdf { margin-left: auto; text-decoration: none; border-left: 1px solid var(--line); border-right: 0; }
 .sheet { padding: clamp(10px, 2vw, 22px); background: var(--paper-2); }
 .sheet img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); cursor: zoom-in; }
@@ -260,7 +261,6 @@ a.cta-email:hover { text-decoration: underline; }
   border-top: 1px solid var(--line);
   display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 13.5px; color: var(--ink-3);
 }
-.motto { color: var(--ink); letter-spacing: .04em; }
 
 /* lightbox */
 dialog#lightbox { border: 0; padding: 0; max-width: 96vw; max-height: 94vh; background: #fff; }
@@ -306,7 +306,8 @@ dialog#lightbox img { display: block; max-width: 96vw; max-height: 94vh; }
   .topbar { gap: 10px; }
   .brand { flex: none; }
   .logo { height: 28px; }
-  .brand-full { font-size: 9.5px; letter-spacing: .03em; }
+  .brand { gap: 8px; }
+  .brand-full { font-size: 15px; padding-left: 8px; }
   .nav-quote { padding: 8px 12px !important; font-size: 13px !important; white-space: nowrap; }
   .utility-in > .util-item:first-child { display: none; }
   .facts-in { grid-template-columns: 1fr; }

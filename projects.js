@@ -5,8 +5,8 @@
 // ─────────────────────────────────────────────────────────────
 
 export const SITE = {
-  name: "Arney Redrafting",
-  short: "AR",
+  name: "Drew Arney CAD",
+  short: "DAC",
   tagline: "Sketches, samples, and old prints turned into clean 3D models and machinist-ready drawings for machine shops and hardware teams across the country.",
   location: "San Luis Obispo, CA",
   email: "drew@drewarneycad.com",

@@ -1,6 +1,6 @@
 # DAC — Drew Arney CAD
 
-Logo files: `logo.svg` (flat, used on the site), `logo-mark.svg` (favicon), and `brand/` (master DAC logo with the matte + satin finish, SVG and transparent PNG).
+Logo files: `logo.svg` (flat, used on the site), `logo-mark.svg` (favicon), and `brand/` (master DAC logo with the matte + satin finish, SVG and transparent PNG, plus a reverse version with white lettering on black).
 
 Static site: plain HTML/CSS/JS, three.js 3D viewer (bundled in /vendor, no build step).
 
